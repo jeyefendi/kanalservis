@@ -1,10 +1,10 @@
 import './App.css';
-import Validation from './components/Validation';
+import Auth from './components/Auth/Auth';
 
 function App({ Component, pageProps }) {
   return (
     <>
-    <Validation/>
+    <Auth/>
     </>
   );
 }

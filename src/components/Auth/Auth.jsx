@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import styles from './Auth.module.css'
 
-const Validation = () => {
+const Auth = () => {
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
     const [loginDirty, setLoginDirty] = useState(false)
@@ -56,17 +57,17 @@ const Validation = () => {
 
 
   return (
-    <div className='validation'>
-        <form action="">
+    <div className={styles.auth}>
+        <form>
             <h1>Autorization</h1>
             {(loginDirty && loginError) && <div style={{color: 'red'}}>{loginError}</div>}
-            <input onChange={e => loginHandler(e)} value={login} onBlur={e => blurHandler(e)} name='login' type="text" placeholder='Enter your login...' />
+            <input className={styles.auth_data} onChange={e => loginHandler(e)} value={login} onBlur={e => blurHandler(e)} name='login' type="text" placeholder='Enter your login...' />
             {(passwordDirty && passwordError) && <div style={{color: 'red'}}>{passwordError}</div>}
-            <input onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandler(e)} name='password' type="password" placeholder='Enter your password...' />
-            <button disabled={!formValid} type='submit'>Submit</button>
+            <input className={styles.auth_data} onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandler(e)} name='password' type="password" placeholder='Enter your password...' />
+            <button className={styles.submit} disabled={!formValid} type='submit'>Submit</button>
         </form>
     </div>
   )
 }
 
-export default Validation
+export default Auth
