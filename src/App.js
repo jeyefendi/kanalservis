@@ -1,11 +1,11 @@
 import './App.css';
-import Layout from './components/Layout/Layout';
+import Validation from './components/Validation';
 
 function App({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+    <Validation/>
+    </>
   );
 }
 
