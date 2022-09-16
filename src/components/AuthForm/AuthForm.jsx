@@ -1,6 +1,7 @@
 /* eslint-disable default-case */
 import React, { useEffect, useState } from "react";
-import styles from "./Auth.module.css";
+import styles from "./AuthForm.module.css";
+import { Link } from 'react-router-dom';
 
 const Auth = () => {
   const [login, setLogin] = useState("");
@@ -21,9 +22,7 @@ const Auth = () => {
 
   const loginHandler = (e) => {
     setLogin(e.target.value);
-    const re =
-      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    if (!re.test(String(e.target.value).toLowerCase())) {
+    if (e.target.value.length < 3) {
       setLoginError("Uncorrect login");
     } else {
       setLoginError("");
@@ -32,7 +31,7 @@ const Auth = () => {
 
   const passwordHandler = (e) => {
     setPassword(e.target.value);
-    if (e.target.value.legth < 3 || e.target.value.length > 8) {
+    if (e.target.value.length < 3 || e.target.value.length > 8) {
       setPasswordError(
         "Password should be at least 3 and at maximum 8 characters"
       );
@@ -60,7 +59,7 @@ const Auth = () => {
       <form>
         <h1>Autorization</h1>
         {loginDirty && loginError && (
-          <div style={{ color: "red" }}>{loginError}</div>
+          <div className={styles.login_error}>{loginError}</div>
         )}
         <div className={styles.auth_data}>
           <span>login</span>
@@ -74,7 +73,7 @@ const Auth = () => {
           />
         </div>
         {passwordDirty && passwordError && (
-          <div style={{ color: "red" }}>{passwordError}</div>
+          <div className={styles.login_error}>{passwordError}</div>
         )}
         <div className={styles.auth_data}>
           <span>password</span>
@@ -89,10 +88,11 @@ const Auth = () => {
         </div>
         
         <button className={styles.submit} disabled={!formValid} type="submit">
-          Submit
+          <Link to="/content">Submit</Link>
         </button>
       </form>
     </div>
+    
   );
 };
 

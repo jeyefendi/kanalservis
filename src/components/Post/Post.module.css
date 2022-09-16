@@ -1,0 +1,5 @@
+.thumbnail {
+        display: block;
+        width: 150px;
+        background-image: url(./post.png);
+}
