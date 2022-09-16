@@ -1,0 +1,23 @@
+:root {
+    --cream: #e4b062;
+  }
+
+header {
+    width: 100vw;
+    height: 118px;
+    padding: 27px 41px;
+    background: var(--cream);
+}
+
+.logo {
+    display: block;
+    width: 273px;
+    height: 63px;
+    background-image: url(./logo.png);
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        width: 70px;
+    }
+}
