@@ -67,7 +67,12 @@
   color: #000;
 }
 
+
 @media screen and (max-width: 600px) {
+  *{
+    margin: 0;
+    padding: 0;
+  }
   .auth_data {
     display: flex;
     flex-direction: column;

@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import React, { useEffect, useState } from "react";
 import styles from "./Auth.module.css";
 
@@ -6,10 +7,8 @@ const Auth = () => {
   const [password, setPassword] = useState("");
   const [loginDirty, setLoginDirty] = useState(false);
   const [passwordDirty, setPasswordDirty] = useState(false);
-  const [loginError, setLoginError] = useState("Login can not be empty");
-  const [passwordError, setPasswordError] = useState(
-    "Password can not be empty"
-  );
+  const [loginError, setLoginError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const [formValid, setFormValid] = useState(false);
 
   useEffect(() => {
