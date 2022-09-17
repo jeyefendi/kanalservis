@@ -1,6 +1,6 @@
 # [LIVE DEMO](https://kanalservis.netlify.app/)
-login: admin<br>
-password: admin
+<b>login:</b> admin<br>
+<b>password:</b> admin
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
