@@ -1,5 +1,15 @@
-.thumbnail {
-        display: block;
-        width: 150px;
-        background-image: url(./post.png);
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 118px);
+}
+
+.confession {
+  font-size: 1.5em;
+  text-align: center;
+  width: clamp(30vw, 52vw, 90vw);
+  height: fit-content;
+  border: 5px solid var(--blueWater);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

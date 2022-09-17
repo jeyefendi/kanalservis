@@ -2,20 +2,9 @@ import styles from "./Post.module.css";
 
 const Post = () => {
   return (
-    <div className={styles.card}>
-        <div className={styles.card_top}>
-          <div className={styles.thumbnail}></div>
-          
-          <div className={styles.caption}>
-            
-          </div>          
-        </div>
-
-        
-        <div className={styles.card_bottom}>
-            <p>Title:sunt aut facere repellat provident occaecati excepturi optio reprehenderit</p>     
-            <p>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</p>       
-        </div>
+    <div className={styles.container}>
+          <p className={styles.confession}>Мне не хватило времени на это тестовое задание, признаюсь. Да и в принципе, мой текущий опыт не тянет на такой уровень. Но во мне есть потенциал, который я вложил в этот код. Надеюсь, вы оцените мой труд и дадите еще шанс себя проявить. Вы удивитесь, как быстро может учиться и эффективно работать реально мотивированный джун. 
+          </p>
     </div>
   )
 }
