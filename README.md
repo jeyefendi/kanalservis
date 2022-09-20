@@ -1,4 +1,4 @@
-# Test Task for Kanalsevice
+# Test Task
 # [LIVE DEMO](https://kanalservis.netlify.app/)
 <b>login:</b> admin<br>
 <b>password:</b> admin
